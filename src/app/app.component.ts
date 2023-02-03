@@ -7,4 +7,20 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'life-cycle-app';
+
+  //Storing Value Of Input Element
+  inputText : string = '';
+  destroy : boolean = true;
+
+  OnSubmit(inputElement : HTMLInputElement){
+
+    this.inputText = inputElement.value;
+
+  }
+
+  
+  destroyComponent(){
+    this.destroy = false;
+  }
+
 }
